@@ -12,7 +12,7 @@ class XylophoneApp extends StatelessWidget {
     player.play(AssetSource('note$noteNumber.wav'));
   }
 
-  Expanded buildKey(Color btncolor, int noteNumber, String name) {
+  Expanded buildKey({Color? btncolor, required int noteNumber, String? name}) {
     return Expanded(
       child: TextButton(
         style: TextButton.styleFrom(
@@ -26,7 +26,7 @@ class XylophoneApp extends StatelessWidget {
           playNote(noteNumber);
         },
         child: Text(
-          name,
+          name ?? "",
           style: const TextStyle(
               color: Color.fromARGB(255, 230, 151, 151), // #8B0000
               fontSize: 20.0,
@@ -46,13 +46,13 @@ class XylophoneApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              buildKey(const Color.fromARGB(255, 139, 0, 0), 1, "DO"),
-              buildKey(const Color.fromARGB(255, 255, 140, 0),2, "RE"),
-              buildKey(const Color.fromARGB(255, 255, 215, 0),3, "MI"),
-              buildKey(const Color.fromARGB(255, 0, 128, 0),4, "FA"),
-              buildKey(const Color.fromARGB(255, 0, 0, 205),5, "SOL"),
-              buildKey(const Color.fromARGB(255, 75, 0, 130),6, "LA"),
-              buildKey(const Color.fromARGB(255, 120, 20, 82),7, "SI"),
+              buildKey(btncolor:const Color.fromARGB(255, 139, 0, 0), noteNumber: 1, name: "DO"),
+              buildKey(btncolor:const Color.fromARGB(255, 255, 140, 0), noteNumber:2, name:"RE"),
+              buildKey(btncolor:const Color.fromARGB(255, 255, 215, 0), noteNumber:3, name:"MI"),
+              buildKey(btncolor:const Color.fromARGB(255, 0, 128, 0), noteNumber:4, name:"FA"),
+              buildKey(btncolor:const Color.fromARGB(255, 0, 0, 205), noteNumber:5, name:"SOL"),
+              buildKey(btncolor:const Color.fromARGB(255, 75, 0, 130), noteNumber:6, name:"LA"),
+              buildKey(btncolor: const Color.fromARGB(255, 120, 20, 82), noteNumber:7, name:"SI"),
             ],
           ),
         ),
