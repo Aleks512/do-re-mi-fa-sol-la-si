@@ -8,8 +8,10 @@ void main() {
 
 class XylophoneApp extends StatelessWidget {
   const XylophoneApp({super.key});
-
-  // const XylophoneApp({super.key});
+  void playNote(int noteNumber) {
+    final player = AudioPlayer();
+    player.play(AssetSource('note$noteNumber.wav'));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,23 +24,22 @@ class XylophoneApp extends StatelessWidget {
               TextButton(
                 child: Text(
                   'do',
-                  style:
-                      TextStyle(color: Color.fromRGBO(255, 255, 255, 1.0) // #8B0000
-                          ),
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 245, 208, 208) // #8B0000
+                      ),
                 ),
                 style: TextButton.styleFrom(
-                  backgroundColor:  Color.fromARGB(255, 139, 0, 0),
+                  backgroundColor: Color.fromARGB(255, 139, 0, 0),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                   padding: EdgeInsets.all(16),
                 ),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note1.wav'));
+                  playNote(1);
                 },
               ),
-                TextButton(
+              TextButton(
                 child: Text(
                   're',
                   style:
@@ -46,18 +47,17 @@ class XylophoneApp extends StatelessWidget {
                           ),
                 ),
                 style: TextButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 255, 140, 0),// #FF8C00,
+                  backgroundColor: Color.fromARGB(255, 255, 140, 0), // #FF8C00,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                   padding: EdgeInsets.all(16),
                 ),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note2.wav'));
+                  playNote(2);
                 },
               ),
-                TextButton(
+              TextButton(
                 child: Text(
                   'mi',
                   style:
@@ -72,11 +72,10 @@ class XylophoneApp extends StatelessWidget {
                   padding: EdgeInsets.all(16),
                 ),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note3.wav'));
+                  playNote(3);
                 },
               ),
-                TextButton(
+              TextButton(
                 child: Text(
                   'fa',
                   style:
@@ -91,11 +90,10 @@ class XylophoneApp extends StatelessWidget {
                   padding: EdgeInsets.all(16),
                 ),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note4.wav'));
+                  playNote(4);
                 },
               ),
-                TextButton(
+              TextButton(
                 child: Text(
                   'sol',
                   style:
@@ -103,18 +101,17 @@ class XylophoneApp extends StatelessWidget {
                           ),
                 ),
                 style: TextButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 0, 0, 205),// #0000CD
+                  backgroundColor: Color.fromARGB(255, 0, 0, 205), // #0000CD
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                   padding: EdgeInsets.all(16),
                 ),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note5.wav'));
+                  playNote(5);
                 },
               ),
-                TextButton(
+              TextButton(
                 child: Text(
                   'la',
                   style:
@@ -129,16 +126,15 @@ class XylophoneApp extends StatelessWidget {
                   padding: EdgeInsets.all(16),
                 ),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note6.wav'));
+                  playNote(6);
                 },
               ),
               TextButton(
                 child: Text(
                   'si',
-                  style:
-                      TextStyle(color: Color.fromARGB(255, 235, 149, 149) // #8B0000
-                          ),
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 235, 149, 149) // #8B0000
+                      ),
                 ),
                 style: TextButton.styleFrom(
                   backgroundColor: Color.fromARGB(255, 120, 20, 82), // #0000CD
@@ -148,8 +144,7 @@ class XylophoneApp extends StatelessWidget {
                   padding: EdgeInsets.all(16),
                 ),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note7.wav'));
+                  playNote(7);
                 },
               ),
             ],
