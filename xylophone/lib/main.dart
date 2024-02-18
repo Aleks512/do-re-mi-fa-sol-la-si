@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/widgets.dart';
@@ -18,134 +19,151 @@ class XylophoneApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              TextButton(
-                child: Text(
-                  'do',
-                  style: TextStyle(
-                      color: Color.fromARGB(255, 245, 208, 208) // #8B0000
-                      ),
-                ),
-                style: TextButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 139, 0, 0),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+              Expanded(
+                child: TextButton(
+                  child: Text(
+                    'DO',
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 230, 151, 151), // #8B0000
+                        fontSize: 20.0, 
+                        letterSpacing: 1.0),
                   ),
-                  padding: EdgeInsets.all(16),
+                  style: TextButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 139, 0, 0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    padding: EdgeInsets.all(16),
+                  ),
+                  onPressed: () {
+                    playNote(1);
+                  },
                 ),
-                onPressed: () {
-                  playNote(1);
-                },
               ),
-              TextButton(
-                child: Text(
-                  're',
-                  style:
-                      TextStyle(color: Color.fromARGB(255, 139, 0, 0) // #8B0000
-                          ),
-                ),
-                style: TextButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 255, 140, 0), // #FF8C00,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+              Expanded(
+                child: TextButton(
+                  child: Text(
+                    'RE',
+                    style:TextStyle(color: Color.fromARGB(255, 139, 0, 0), // #8B0000
+                        fontSize: 20.0, 
+                        letterSpacing: 1.0),
                   ),
-                  padding: EdgeInsets.all(16),
+                  style: TextButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 255, 140, 0), // #FF8C00,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    padding: EdgeInsets.all(16),
+                  ),
+                  onPressed: () {
+                    playNote(2);
+                  },
                 ),
-                onPressed: () {
-                  playNote(2);
-                },
               ),
-              TextButton(
-                child: Text(
-                  'mi',
-                  style:
-                      TextStyle(color: Color.fromARGB(255, 139, 0, 0) // #8B0000
-                          ),
-                ),
-                style: TextButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 255, 215, 0), // #FFD700
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+              Expanded(
+                child: TextButton(
+                  child: Text(
+                    'MI',
+                    style:TextStyle(color: Color.fromARGB(255, 139, 0, 0), // #8B0000
+                        fontSize: 20.0, 
+                        letterSpacing: 1.0)
                   ),
-                  padding: EdgeInsets.all(16),
+                  style: TextButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 255, 215, 0), // #FFD700
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    padding: EdgeInsets.all(16),
+                  ),
+                  onPressed: () {
+                    playNote(3);
+                  },
                 ),
-                onPressed: () {
-                  playNote(3);
-                },
               ),
-              TextButton(
-                child: Text(
-                  'fa',
-                  style:
-                      TextStyle(color: Color.fromARGB(255, 139, 0, 0) // #8B0000
-                          ),
-                ),
-                style: TextButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 0, 128, 0), // #008000
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+              Expanded(
+                child: TextButton(
+                  child: Text(
+                    'FA',
+                    style:
+                        TextStyle(color: Color.fromARGB(255, 139, 0, 0) // #8B0000
+                            ),
                   ),
-                  padding: EdgeInsets.all(16),
+                  style: TextButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 0, 128, 0), // #008000
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    padding: EdgeInsets.all(16),
+                  ),
+                  onPressed: () {
+                    playNote(4);
+                  },
                 ),
-                onPressed: () {
-                  playNote(4);
-                },
               ),
-              TextButton(
-                child: Text(
-                  'sol',
-                  style:
-                      TextStyle(color: Color.fromARGB(255, 139, 0, 0) // #8B0000
-                          ),
-                ),
-                style: TextButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 0, 0, 205), // #0000CD
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+              Expanded(
+                child: TextButton(
+                  child: Text(
+                    'SOL',
+                    style:
+                        TextStyle(color: Color.fromARGB(255, 225, 105, 105) // #8B0000
+                            ),
                   ),
-                  padding: EdgeInsets.all(16),
+                  style: TextButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 0, 0, 205), // #0000CD
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    padding: EdgeInsets.all(16),
+                  ),
+                  onPressed: () {
+                    playNote(5);
+                  },
                 ),
-                onPressed: () {
-                  playNote(5);
-                },
               ),
-              TextButton(
-                child: Text(
-                  'la',
-                  style:
-                      TextStyle(color: Color.fromARGB(255, 139, 0, 0) // #8B0000
-                          ),
-                ),
-                style: TextButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 75, 0, 130), // #0000CD
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+              Expanded(
+                child: TextButton(
+                  child: Text(
+                    'LA',
+                    style:
+                        TextStyle(color: Color.fromARGB(255, 233, 143, 143) // #8B0000
+                            ),
                   ),
-                  padding: EdgeInsets.all(16),
+                  style: TextButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 75, 0, 130), // #0000CD
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    padding: EdgeInsets.all(16),
+                  ),
+                  onPressed: () {
+                    playNote(6);
+                  },
                 ),
-                onPressed: () {
-                  playNote(6);
-                },
               ),
-              TextButton(
-                child: Text(
-                  'si',
-                  style: TextStyle(
-                      color: Color.fromARGB(255, 235, 149, 149) // #8B0000
-                      ),
-                ),
-                style: TextButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 120, 20, 82), // #0000CD
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+              Expanded(
+                child: TextButton(
+                  child: Text(
+                    'SI',
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 235, 149, 149) // #8B0000
+                        ),
                   ),
-                  padding: EdgeInsets.all(16),
+                  style: TextButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 120, 20, 82), // #0000CD
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    padding: EdgeInsets.all(16),
+                  ),
+                  onPressed: () {
+                    playNote(7);
+                  },
                 ),
-                onPressed: () {
-                  playNote(7);
-                },
               ),
             ],
           ),
