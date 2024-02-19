@@ -5,6 +5,8 @@ void main() {
   runApp(const XylophoneApp());
 }
 
+//void main()=> runApp(const XylophoneApp());
+
 class XylophoneApp extends StatelessWidget {
   const XylophoneApp({super.key});
   void playNote(int noteNumber) {

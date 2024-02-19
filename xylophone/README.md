@@ -1,16 +1,20 @@
-# xylophone
+# Simple Flutter Xylophone App
 
-A new Flutter project.
+This codebase defines a simple Flutter application that simulates a xylophone. The application utilizes the `audioplayers` package to play audio files, each corresponding to a different note of the xylophone. Below is a brief description of the key components of the code:
+
+## Key Features
+
+- **Xylophone Simulation:** Offers a virtual xylophone experience with touch-responsive keys.
+- **Audio Playback:** Leverages the `audioplayers` package for playing distinct audio files for each xylophone note.
+- **Custom UI:** Features a user-friendly interface with colorful buttons representing different musical notes.
+
+## Screenshot
+
+![Xylophone App Screenshot](assets/cymbalki.png)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To run this project, ensure you have Flutter installed on your machine. Clone the repository, navigate to the project directory, and execute:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter run
