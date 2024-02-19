@@ -10,7 +10,7 @@ This codebase defines a simple Flutter application that simulates a xylophone. T
 
 ## Screenshot
 
-![Xylophone App Screenshot](Xylophone/assets/cymbalki.png)
+![Xylophone App Screenshot](xylophone/assets/cymbalki.png)
 
 ## Getting Started
 
